@@ -14,6 +14,7 @@ const fetch = require('./utils/fetch');
 const { version, name } = require('../package.json');
 const reApp = /^\d{1,7}$/;
 const reID = /^\d{17}$/;
+const reRegion = /us|es|de|fr|ru|nz|au|uk/;
 
 const reProfileBase = String.raw`(?:(?:(?:(?:https?)?:\/\/)?(?:www\.)?steamcommunity\.com)?)?\/?`;
 const reProfileURL = RegExp(String.raw`${reProfileBase}(?:profiles\/)?(\d{17})`, 'i');
